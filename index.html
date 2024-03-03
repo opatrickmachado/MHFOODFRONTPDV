@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Pedidos</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="assets/img/Favicon.png" alt="Ícone">
+        </div>
+        <div class="menu">
+            <a href="index.html" class="menu-link selected" id="link-pedidos">Pedidos</a>
+            <a href="cozinha.html" class="menu-link" id="link-cozinha">Cozinha</a>
+            <a href="retirada.html" class="menu-link" id="link-retirada">Retirada</a>
+        </div>
+    </header>
+    <main>
+        <!-- Aqui vai o conteúdo específico da página inicial -->
+        <div class="bem-vindo">
+            <h1>Seja Bem Vindo!</h1>
+            <!-- Modificação na caixa de texto para procurar produtos -->
+            <input type="text" id="input-procura" placeholder="O que você procura?">
+        </div>
+        <div class="categorias">
+            <h2><strong>Categorias</strong></h2>
+            <p>Navegue por categoria</p>
+            <div class="categorias-container">
+                <div class="categoria">
+                    <div class="categoria-wrapper">
+                        <img src="assets/img/combos.png" alt="Combos">
+                        <p>Combos</p>
+                    </div>
+                </div>
+                <div class="categoria">
+                    <div class="categoria-wrapper">
+                        <img src="assets/img/acompanhamentos.png" alt="Acompanhamentos">
+                        <p>Acompanhamentos</p>
+                    </div>
+                </div>
+                <div class="categoria">
+                    <div class="categoria-wrapper">
+                        <img src="assets/img/bebidas.png" alt="Bebidas">
+                        <p>Bebidas</p>
+                    </div>
+                </div>
+                <div class="categoria">
+                    <div class="categoria-wrapper">
+                        <img src="assets/img/Sobremesas.png" alt="Sobremesas">
+                        <p>Sobremesas</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="produtos">
+            <h2>Produtos</h2>
+            <p>Selecione um produto para adicionar ao seu pedido</p>
+            <div class="produtos-container">
+                <div class="produto">
+                    <div class="produto-wrapper">
+                        <img src="assets/img/SmashDaCasa.png" alt="Nome do Produto">
+                        <div class="produto-info">
+                            <h3>Nome do Produto</h3>
+                            <p>2x hambúrguer 200g, queijo cheddar, tomate, alface, picles, cebola, molho da casa.</p>
+                            <p class="preco">R$${precoFormatado}</p>
+                            <div class="selecionar"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Seção para exibir o resumo do pedido -->
+        <div class="resumo-pedido">
+            <h2>Resumo do Pedido</h2>
+            <div class="pedido-info">
+                <!-- Aqui será exibido o nome e valor do pedido -->
+            </div>
+            <div class="borda"></div>
+            <div class="total">
+                <p>Total do pedido: <span id="total-pedido"></span></p>
+            </div>
+        </div>
+        <div class="revisar-pedido">
+            <h2>Revise seu pedido!</h2>
+            <div class="pedido-info">
+                <div class="produto-info">
+                    <img id="produto-imagem" src="" alt="Nome do Produto">
+                    <div>
+                        <h3 id="produto-nome">Nome do Produto</h3>
+                        <p id="produto-descricao">2x hambúrguer 200g, queijo cheddar, tomate, alface, picles, cebola,
+                            molho da casa.</p>
+                        <p class="preco">Preço: <span id="preco-lanche"></span></p>
+                    </div>
+                </div>
+                <div class="quantidade">
+                    <button id="diminuir-quantidade">-</button>
+                    <span id="quantidade">1</span>
+                    <button id="aumentar-quantidade">+</button>
+                </div>
+            </div>
+            <div class="resumo-pedido-revisao">
+                <h3>Resumo do Pedido</h3>
+                <div class="pedido-info-revisao">
+                    <!-- Aqui será exibido o resumo do pedido -->
+                </div>
+            </div>
+            <div class="adicionais">
+                <h3>Adicionais</h3>
+                <div class="adicional">
+                    <div class="adicional-info">
+                        <img src="assets/img/Bacon.png" alt="Bacon">
+                        <div>
+                            <p class="nome-adicional"><strong>Bacon</strong></p>
+                            <p class="informacoes-adicional">10g</p>
+                        </div>
+                    </div>
+                    <p class="preco-adicional">R$ 1,00</p>
+                    <input type="radio" name="adicionais" id="adicional-bacon" value="bacon">
+                </div>
+                <div class="adicional">
+                    <div class="adicional-info">
+                        <img src="assets/img/Cheddar.png" alt="Cheddar">
+                        <div>
+                            <p class="nome-adicional"><strong>Cheddar</strong></p>
+                            <p class="informacoes-adicional">10g</p>
+                        </div>
+                    </div>
+                    <p class="preco-adicional">R$ 1,00</p>
+                    <input type="radio" name="adicionais" id="adicional-cheddar" value="cheddar">
+                </div>
+                <div class="adicional">
+                    <div class="adicional-info">
+                        <img src="assets/img/Molho Acompanhamento.png" alt="Molho Acompanhamento">
+                        <div>
+                            <p class="nome-adicional"><strong>Molho Acompanhamento</strong></p>
+                            <p class="informacoes-adicional">Barbecue</p>
+                        </div>
+                    </div>
+                    <p class="preco-adicional">R$ 1,00</p>
+                    <input type="radio" name="adicionais" id="adicional-molho" value="molho">
+                </div>
+            </div>            
+            <div class="observacoes">
+                <h3>Observações</h3>
+                <textarea id="observacoes" placeholder="Adicione uma observação ao pedido"></textarea>
+            </div>
+            <div class="borda"></div>
+            <div class="total">
+                <p>Total do pedido: <span id="total-pedido-revisar"></span></p>
+            </div>
+            <div class="botoes">
+                <button id="continuar-adicionando">Continuar Adicionando</button>
+                <button id="adicionar-ao-pedido">Adicionar ao Pedido</button>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <button id="cancelar">Cancelar Pedido</button>
+        <button id="finalizar">Finalizar Pedido</button>
+    </footer>
+    <script src="assets/js/scripts.js"></script>
+    <script src="assets/js/index.js"></script>
+</body>
+
+</html>

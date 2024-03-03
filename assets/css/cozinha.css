@@ -1,0 +1,160 @@
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+header {
+    background-color: #004718;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    max-width: 100%;
+    height: auto;
+}
+
+.menu {
+    font-weight: bold;
+}
+
+.menu-link {
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.menu-link.selected {
+    background-color: rgb(0, 37, 0);
+}
+
+main {
+    padding: 20px;
+}
+
+.cozinha-container {
+    display: flex;
+}
+
+.cozinha-painel {
+    flex: 1;
+}
+
+.cozinha-painel h2 {
+    font-weight: bold;
+    color: #004718;
+}
+
+.pedido {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.pedido img {
+    width: 100px;
+    border-radius: 5px;
+}
+
+.info-pedido {
+    margin-left: 20px;
+}
+
+.info-pedido strong {
+    font-weight: bold;
+}
+
+.pedido-opcoes button {
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.pedido-opcoes button.pedido-cancelar {
+    background-color: #f5cbcb;
+    color: #cc0000;
+}
+
+.pedido-opcoes button.pedido-confirmar {
+    background-color: #a7d6a7;
+    color: #006600;
+}
+
+.cozinha-separador {
+    border-left: 2px solid green;
+    margin: 0 20px;
+}
+
+.pedido-pronto {
+    border: 2px solid #004718;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    /* Para manter os itens alinhados */
+    align-items: center;
+    /* Para alinhar os itens verticalmente */
+}
+
+.pedido-pronto img {
+    width: 100px;
+    border-radius: 5px;
+}
+
+.info-pedido {
+    margin-left: 20px;
+    flex-grow: 1;
+    /* Para ocupar o espaço disponível */
+}
+
+.pedido-opcoes {
+    display: flex;
+    /* Para alinhar os botões na mesma linha */
+}
+
+.observacoes-container {
+    margin-top: 10px;
+    /* Espaço entre a info-pedido e as observações */
+}
+
+.observacoes {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 5px;
+    /* Espaço entre o texto "Observações" e o campo de observações */
+}
+
+.observacoes strong {
+    display: block;
+    /* Coloca a escrita em negrito em uma nova linha */
+}
+
+/* Adiciona borda verde aos pedidos no painel "Pronto" */
+.pronto-container .pedido {
+    border: 2px solid #004718;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    margin-top: 10px; /* Adiciona um espaçamento entre os pedidos */
+}
+
+/* Muda a cor do texto e dos botões para verde nos pedidos no painel "Pronto" */
+.pronto-container .pedido .info-pedido {
+    color: #470000;
+}
+
+.pronto-container .pedido .pedido-opcoes button {
+    background-color: #f5cbcb;
+    color: #cc0000;
+}
